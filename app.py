@@ -1,8 +1,10 @@
 import os
 import json
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 def create_user_folder(user_id):
     """
